@@ -9,9 +9,11 @@ function addVideo() {
         const videoContainer = document.createElement('div');
         videoContainer.className = 'video-container';
         videoContainer.innerHTML = `
-            <iframe src="https://www.youtube.com/embed/${videoId}" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div class="like-container">
-                <button class="like-button" onclick="likeVideo('${videoId}')">👍 <span id="like-count-${videoId}">0</span></button>
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="card-body">
+                    <button class="like-button" onclick="likeVideo('${videoId}')">👍 <span id="like-count-${videoId}">0</span></button>
+                </div>
             </div>
         `;
 
@@ -46,9 +48,11 @@ function loadVideos() {
         const videoContainer = document.createElement('div');
         videoContainer.className = 'video-container';
         videoContainer.innerHTML = `
-            <iframe src="https://www.youtube.com/embed/${videoId}" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div class="like-container">
-                <button class="like-button" onclick="likeVideo('${videoId}')">👍 <span id="like-count-${videoId}">${likeCount}</span></button>
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="card-body">
+                    <button class="like-button" onclick="likeVideo('${videoId}')">👍 <span id="like-count-${videoId}">${likeCount}</span></button>
+                </div>
             </div>
         `;
         videoList.appendChild(videoContainer);
