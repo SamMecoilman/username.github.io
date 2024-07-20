@@ -2,23 +2,19 @@ document.addEventListener("DOMContentLoaded", loadVideos);
 
 function addVideo() {
     const url = document.getElementById('video-url').value;
-    if (url) {
-        const videoId = extractVideoId(url);
-        if (videoId) {
-            const videoList = document.getElementById('video-list');
-            const videoContainer = document.createElement('div');
-            videoContainer.className = 'video-container';
-            videoContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    const videoId = extractVideoId(url);
 
-            videoList.appendChild(videoContainer);
-            saveVideo(videoId);
+    if (videoId) {
+        const videoList = document.getElementById('video-list');
+        const videoContainer = document.createElement('div');
+        videoContainer.className = 'video-container';
+        videoContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 
-            document.getElementById('video-url').value = '';
-        } else {
-            alert('有効なYouTubeのURLを入力してください。');
-        }
+        videoList.appendChild(videoContainer);
+        saveVideo(videoId);
+        document.getElementById('video-url').value = '';
     } else {
-        alert('URLを入力してください。');
+        alert('有効なYouTubeのURLを入力してください。');
     }
 }
 
