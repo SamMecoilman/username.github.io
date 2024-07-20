@@ -6,25 +6,60 @@
     <title>ファンサイト</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fafafa;
             color: #333;
-            text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        header, footer {
-            background-color: #333;
+        header {
+            width: 100%;
+            background-color: #4CAF50;
             color: #fff;
-            padding: 10px 0;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         main {
             background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin: 20px auto;
+            padding: 40px 20px;
+            margin: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             max-width: 800px;
+            width: 100%;
             border-radius: 8px;
+        }
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+        h1, h2 {
+            margin: 0 0 20px 0;
+            padding: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -34,7 +69,8 @@
     </header>
     <main>
         <h2>ようこそ！</h2>
-        <p>これはあなたのファンサイトのホームページです。</p>
+        <p>これはあなたのファンサイトのホームページです。ここでは、最新の情報やコンテンツをシェアしています。楽しんでください！</p>
+        <a href="#" class="button">もっと見る</a>
     </main>
     <footer>
         <p>&copy; 2024 ファンサイト. All rights reserved.</p>
