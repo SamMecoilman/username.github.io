@@ -3,84 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新潟ラーメンファンサイト</title>
-    <style>
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            background-color: #fdf5e6;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header {
-            width: 100%;
-            background-color: #e60012;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        main {
-            background-color: #fff;
-            padding: 40px 20px;
-            margin: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            max-width: 800px;
-            width: 100%;
-            border-radius: 8px;
-        }
-        footer {
-            width: 100%;
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            margin-top: auto;
-        }
-        h1, h2 {
-            margin: 0 0 20px 0;
-            padding: 0;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            color: #fff;
-            background-color: #e60012;
-            border: none;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #d50000;
-        }
-        .ramen-img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-    </style>
+    <title>動画一覧作成サイト</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>新潟ラーメンファンサイト</h1>
+        <h1>動画一覧作成サイト</h1>
     </header>
     <main>
-        <img src="https://example.com/ramen.jpg" alt="新潟ラーメン" class="ramen-img">
-        <h2>新潟のラーメンとは？</h2>
-        <p>新潟のラーメンは、濃厚な味噌ラーメンや背脂たっぷりの醤油ラーメンが有名です。特に冬の寒い時期には、体を温めるのにぴったりの一杯です。</p>
-        <a href="#" class="button">もっと見る</a>
+        <div class="input-container">
+            <input type="text" id="video-url" placeholder="動画のURLを入力してください">
+            <button onclick="addVideo()">追加</button>
+        </div>
+        <div id="video-list"></div>
     </main>
     <footer>
-        <p>&copy; 2024 新潟ラーメンファンサイト. All rights reserved.</p>
+        <p>&copy; 2024 動画一覧作成サイト. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
