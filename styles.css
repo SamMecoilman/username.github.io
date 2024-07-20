@@ -23,7 +23,7 @@ main {
     padding: 20px;
     margin: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    max-width: 800px;
+    max-width: 1200px;
     width: 100%;
     border-radius: 8px;
     display: flex;
@@ -44,6 +44,7 @@ footer {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .input-container input {
@@ -75,8 +76,10 @@ footer {
 }
 
 .video-container {
-    width: 320px;
+    flex: 1 1 30%;
     margin: 10px;
+    max-width: 300px;
+    box-sizing: border-box;
 }
 
 .card {
